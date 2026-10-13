@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itzfizz Hero</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+<div class="h-[200vh]">
+<div id="hero" class="h-screen sticky top-0 flex items-center justify-center bg-gradient-to-br from-purple-600 to-orange-400">
+<h1 id="title" class="text-[15vw] font-black">ITZFIZZ</h1>
+</div>
+</div>
+<section class="h-screen flex items-center justify-center bg-black"><h2 class="text-4xl">Next Section</h2></section>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+gsap.to("#title",{scale:3,opacity:0,y:-200,scrollTrigger:{trigger:"div",start:"top top",end:"+=100%",scrub:1}});
+</script>
+</body>
+</html>
